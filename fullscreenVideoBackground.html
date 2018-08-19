@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HAPPY BIRTHDAY SONG</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    font-size: 17px;
+    max-height: 2000px;
+}
+#container{
+    background-image: url(images/happyBirthday6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#myVideo {
+    position: initial;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #777;
+
+}
+
+.content {
+    position: initial;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    min-height: fit-content;
+    
+
+}
+
+.button 
+{
+background-color: #008CBA; /* Green */
+width: 200px;
+border: none;
+border-radius: 6px;
+color: white;
+padding: 8px 16px 8px 16px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 2px 1px;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+}
+
+.button1 
+{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button1:hover 
+{
+    background-color: #008CBA;
+    color: white;
+}
+
+</style>
+</head>
+<body>
+<div id="container">
+<video autoplay id="myVideo">
+  <source src="videos/happyBirthdaySong.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1><em> HAPPY BIRTHDAY WISHES </em></h1>
+  <p>My life has been blessed with numerous friends over the years, but my heart treasures none like it treasures you. The price of the most precious stone on earth cannot be compared to what's inside you, I call it as <em>sweet heart</em>. I pray that good fortune will accompany you until the end of time & hope you have a birthday celebration that is as beautiful as your soul.</p>
+  <button class="button button1" onclick="myFunction()">Play</button>
+  <form action="index.html" method="post">
+    <button class="button button1" type="submit">Back</button>
+</div>
+</div>
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
